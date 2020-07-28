@@ -1,0 +1,11 @@
+.reccomended {
+    background: rgba(216, 122, 122, 0.281);
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    overflow: scroll;
+
+}
+

@@ -1,0 +1,5 @@
+.game-card {
+    max-width: 400px;
+    overflow: hidden;
+    margin: 20px;
+}

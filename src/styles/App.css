@@ -1,0 +1,12 @@
+.app {
+    background: grey;
+    display: flex;
+    
+}
+
+
+@media all and (min-width: 1000px) {
+    .app{
+        flex-direction: column;
+    }
+}

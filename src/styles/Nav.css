@@ -1,0 +1,13 @@
+.nav {
+    background-color: rgba(255, 0, 0, 0.89);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    color: white;
+    
+}
+
+.logo {
+    margin-right: 300px;
+}

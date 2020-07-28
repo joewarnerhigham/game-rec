@@ -1,0 +1,31 @@
+.game-details {
+    display: flex;
+    background: rgba(199, 141, 141, 0.26);
+    height: 600px;
+    overflow: scroll;
+    margin: 20px;
+    padding: 20px;
+}
+
+.game-image {
+    max-height: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.about-game {
+    margin-top: 20px;
+}
+
+@media all and (max-width: 1200px) {
+    .game-details{
+        flex-direction: column;
+    }
+
+    .game-image { 
+        max-width: 300px;
+        align-self: center;
+    }
+
+    
+}
