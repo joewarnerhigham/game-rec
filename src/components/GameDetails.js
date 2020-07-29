@@ -2,7 +2,15 @@ import React from 'react';
 import '../styles/GameDetails.css';
 import { Container, Header, Segment, Button, Icon } from 'semantic-ui-react';
 
-const GameDetails = () => {
+const GameDetails = 
+    ({  
+        gameImage,
+        gameTitle,
+        gameDetails, 
+        gameRating,
+        getPrice,
+    
+    }) => {
 
     const square = { width: 175, height: 175 }
 
@@ -10,9 +18,9 @@ const GameDetails = () => {
 
     return (
         <div className='game-details'>
-            <img className='game-image' src='https://www.rockstargames.com/rockstar_games/games/img/fob/640/sanandreas.jpg' alt='San-Andreas' />
+            <img className='game-image' src={gameImage} alt='gamepic' />
             <Container className='about-game' text>
-                <Header as='h2'>GTA San Andreas</Header>
+            <Header as='h2'> GTA San Andreas</Header>
                     <p>
                         Five years ago Carl Johnson escaped from the pressures of life in Los Santos,
                         San Andreas... a city tearing itself apart with gang trouble, drugs and corruption.
@@ -47,7 +55,7 @@ const GameDetails = () => {
                 <Header as='h2'>
                     Rating 
                     <Header.Subheader>
-                        4.2
+                        {`${gameRating}`}
                     </Header.Subheader>
                 </Header>
                 <Icon name='star' size='small'></Icon>

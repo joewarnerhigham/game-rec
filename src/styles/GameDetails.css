@@ -7,6 +7,9 @@
     padding: 20px;
 }
 
+.header{
+    color: red;
+}
 .game-image {
     max-height: 400px;
     margin-left: 20px;
@@ -16,6 +19,7 @@
 .about-game {
     margin-top: 20px;
 }
+
 
 @media all and (max-width: 1200px) {
     .game-details{
