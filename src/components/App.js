@@ -10,17 +10,17 @@ function App() {
   const initialState = {
     gameImage: 'https://www.rockstargames.com/rockstar_games/games/img/fob/640/sanandreas.jpg',
     gameTitle: 'GTA San Andreas',
-    gameDetails: '',
+    gameDetails: 'Game Details',
     gameRating: '4.2',
-    gamePrice: '',
+    gamePrice: '12.99',
     findBest: '',
   }
 
   const [gameImage, setgameImage] = useState(initialState.gameImage);
-  const [gameTitle, setgameTitle] = useState(initialState);
-  const [gameDetails, setgameDetails] = useState(initialState);
+  const [gameTitle, setgameTitle] = useState(initialState.gameTitle);
+  const [gameDetails, setgameDetails] = useState(initialState.gameDetails);
   const [gameRating, setgameRating] = useState(initialState.gameRating);
-  const [gamePrice, setgamePrice] = useState(initialState);
+  const [gamePrice, setgamePrice] = useState(initialState.gamePrice);
 
   const [findBest, setfindBest] = useState(initialState);
 
