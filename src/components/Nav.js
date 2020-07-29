@@ -2,9 +2,12 @@ import React, {useState} from 'react';
 import '../styles/Nav.css';
 import { Input } from 'semantic-ui-react';
 
-const Nav = ({setgameImage}) => {
+const Nav = ({
+            setgameImage,
+        }) => {
 
     const [value, setValue] = useState('');
+
 
     const handleChange = (e) => {
         setValue(e.target.value)

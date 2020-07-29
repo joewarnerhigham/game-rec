@@ -20,6 +20,8 @@ function App() {
     reccomendedGames: {
       reccomendedGameImage: 'https://upload.wikimedia.org/wikipedia/en/9/92/Halo2-cover.png',
       reccomendedGameTitle: 'Red Dead Redemption 2',
+      reccomendedGameImage2: 'https://i.redd.it/5ah99bv9croy.png',
+      reccomendedGameTitle2: 'Destiny',
     },
   }
 
@@ -32,15 +34,18 @@ function App() {
 
   const [reccomendedGameImage, setReccomendedGameImage] = useState(initialState.reccomendedGames.reccomendedGameImage);
   const [reccomendedGameTitle, setReccomendedGameTitle] = useState(initialState.reccomendedGames.reccomendedGameTitle);
-  
+  const [reccomendedGameImage2, setReccomendedGameImage2] = useState(initialState.reccomendedGames.reccomendedGameImage2);
+  const [reccomendedGameTitle2, setReccomendedGameTitle2] = useState(initialState.reccomendedGames.reccomendedGameTitle2);
 
 
   return (
 
-    
+
     <div className="App">
       <Nav
         setgameImage={setgameImage}
+        setReccomendedGameImage={setReccomendedGameImage}
+        setReccomendedGameImage2={setReccomendedGameImage2}
         gameTitle={setgameTitle}
         gameDetails={setgameDetails}
         gameRating={setgameRating}
@@ -55,9 +60,12 @@ function App() {
         findBest={findBest} />
       <Reccomended 
         reccomendedGameImage={reccomendedGameImage}
+        reccomendedGameImage2={reccomendedGameImage2}
         reccomendedGameTitle={reccomendedGameTitle}
+        reccomendedGameTitle2={reccomendedGameTitle2}
         gameImage={gameImage}
         gameTitle={gameTitle} />
+
     </div>
   );
 }

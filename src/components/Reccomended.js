@@ -2,7 +2,12 @@ import React from 'react';
 import '../styles/Reccomended.css';
 import GameCard from './GameCard';
 
-const Reccomended = ({reccomendedGameTitle, reccomendedGameImage, gameTitle, gameImage}) => {
+const Reccomended = ({reccomendedGameTitle,
+                    reccomendedGameImage,
+                    gameTitle,
+                    gameImage,
+                    reccomendedGameImage2,
+                    reccomendedGameTitle2}) => {
     return (
         <div className='reccomended'>
             
@@ -10,8 +15,8 @@ const Reccomended = ({reccomendedGameTitle, reccomendedGameImage, gameTitle, gam
                 title={reccomendedGameTitle}
                 image={reccomendedGameImage}/>
             <GameCard 
-                title ={gameTitle}
-                image={gameImage}/>
+                title ={reccomendedGameTitle2}
+                image={reccomendedGameImage2}/>
 
             <GameCard 
                 title={reccomendedGameTitle}
