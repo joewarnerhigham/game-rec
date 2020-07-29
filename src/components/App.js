@@ -21,7 +21,7 @@ function App() {
       reccomendedGameImage: 'https://upload.wikimedia.org/wikipedia/en/9/92/Halo2-cover.png',
       reccomendedGameTitle: 'Red Dead Redemption 2',
     },
-  };
+  }
 
   const [gameImage, setgameImage] = useState(initialState.currentGame.gameImage);
   const [gameTitle, setgameTitle] = useState(initialState.currentGame.gameTitle);
@@ -33,8 +33,11 @@ function App() {
   const [reccomendedGameImage, setReccomendedGameImage] = useState(initialState.reccomendedGames.reccomendedGameImage);
   const [reccomendedGameTitle, setReccomendedGameTitle] = useState(initialState.reccomendedGames.reccomendedGameTitle);
   
-  
+
+
   return (
+
+    
     <div className="App">
       <Nav
         setgameImage={setgameImage}
