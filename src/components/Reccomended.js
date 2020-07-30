@@ -2,28 +2,28 @@ import React from 'react';
 import '../styles/Reccomended.css';
 import GameCard from './GameCard';
 
-const Reccomended = ({reccomendedGameTitle,
-                    reccomendedGameImage,
+const Reccomended = ({reccomendedGameTitleOne,
+                    reccomendedGameImageOne,
                     gameTitle,
                     gameImage,
-                    reccomendedGameTitle2,
-                    reccomendedGameImage2,
-                    reccomendedGameTitle3,
-                    reccomendedGameImage3,
+                    reccomendedGameTitleTwo,
+                    reccomendedGameImageTwo,
+                    reccomendedGameTitleThree,
+                    reccomendedGameImageThree,
                 }) => {
     return (
         <div className='reccomended'>
             
             <GameCard 
-                title={reccomendedGameTitle3}
-                image={reccomendedGameImage3}/>
+                title={reccomendedGameTitleThree}
+                image={reccomendedGameImageThree}/>
             <GameCard 
-                title ={reccomendedGameTitle2}
-                image={reccomendedGameImage2}/>
+                title ={reccomendedGameTitleTwo}
+                image={reccomendedGameImageTwo}/>
 
             <GameCard 
-                title={reccomendedGameTitle}
-                image={reccomendedGameImage}/>
+                title={reccomendedGameTitleOne}
+                image={reccomendedGameImageOne}/>
             <GameCard 
                 title={gameTitle}
                 image={gameImage}/>
