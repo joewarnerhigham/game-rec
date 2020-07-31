@@ -21,15 +21,18 @@
 }
 
 
-@media all and (max-width: 1200px) {
-    .game-details{
+@media only screen and (max-width: 1000px) {
+
+.game-details {
+        justify-content: center;
         flex-direction: column;
+        height: max-content;
+        align-items: center;
+        text-align: center;
     }
 
-    .game-image { 
-        max-width: 300px;
-        align-self: center;
-    }
-
-    
+.ui.circular.segment.element.style {
+    width: 80px;
+    height: 80px;
+}
 }

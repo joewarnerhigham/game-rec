@@ -9,7 +9,7 @@ const GameCard = ({title, image}) => {
         <div className='game-card'>
             <h3>Reccomended 'title'</h3>
             <Card 
-                image={image}
+                image={image} 
                 header={title}
                 meta='Sci-fy 1st Person Shooter'
                 description='Halo 2 is a 2004 first-person shooter game developed by Bungie and published by Microsoft Game Studios. Released for the Xbox, the game is the second installment in the Halo franchise and the sequel to 2001s critically acclaimed Halo Combat Evolved'
