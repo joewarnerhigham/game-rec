@@ -30,6 +30,10 @@ function App() {
           recGameImageThree: 'https://images.pushsquare.com/7efe4c6a07f2e/red-dead-redemption-2-cover.cover_large.jpg',
           recGameTitleThree: 'Red Dead Redemption 2',
         },
+        recGameFour: {
+          recGameImageFour: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/CallofDutyModernWarfare%282019%29.jpg/220px-CallofDutyModernWarfare%282019%29.jpg',
+          recGameTitleFour: 'Call Of Duty MW',
+        },
     },
   };
 
@@ -46,6 +50,9 @@ function App() {
   const [reccomendedGameTitleTwo, setReccomendedGameTitleTwo] = useState(initialState.reccomendedGames.recGameTwo.recGameTitleTwo);
   const [reccomendedGameImageThree, setReccomendedGameImageThree] = useState(initialState.reccomendedGames.recGameThree.recGameImageThree);
   const [reccomendedGameTitleThree, setReccomendedGameTitleThree] = useState(initialState.reccomendedGames.recGameThree.recGameTitleThree);
+  const [reccomendedGameImageFour, setReccomendedGameImageFour] = useState(initialState.reccomendedGames.recGameFour.recGameImageFour);
+  const [reccomendedGameTitleFour, setReccomendedGameTitleFour] = useState(initialState.reccomendedGames.recGameFour.recGameTitleFour);
+  
   
 
 
@@ -76,6 +83,8 @@ function App() {
         reccomendedGameTitleTwo={reccomendedGameTitleTwo}
         reccomendedGameImageThree={reccomendedGameImageThree}
         reccomendedGameTitleThree={reccomendedGameTitleThree}
+        reccomendedGameImageFour={reccomendedGameImageFour}
+        reccomendedGameTitleFour={reccomendedGameTitleFour}
         gameImage={gameImage}
         gameTitle={gameTitle} />
 

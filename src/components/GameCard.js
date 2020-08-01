@@ -2,12 +2,12 @@ import React from 'react';
 import '../styles/GameCard.css';
 import { Card } from 'semantic-ui-react';
 
-const GameCard = ({title, image}) => {
+const GameCard = ({title, image, gameTitle}) => {
     
     return (
 
         <div className='game-card'>
-            <h3>Reccomended 'title'</h3>
+            <h4>Reccomended {title} becasue of {gameTitle} </h4>
             <Card 
                 image={image} 
                 header={title}

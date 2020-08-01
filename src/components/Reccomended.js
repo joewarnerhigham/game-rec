@@ -10,23 +10,29 @@ const Reccomended = ({reccomendedGameTitleOne,
                     reccomendedGameImageTwo,
                     reccomendedGameTitleThree,
                     reccomendedGameImageThree,
+                    reccomendedGameImageFour,
+                    reccomendedGameTitleFour,
                 }) => {
     return (
         <div className='reccomended'>
             
             <GameCard 
                 title={reccomendedGameTitleThree}
-                image={reccomendedGameImageThree}/>
+                image={reccomendedGameImageThree}
+                gameTitle={gameTitle}/>
             <GameCard 
                 title ={reccomendedGameTitleTwo}
-                image={reccomendedGameImageTwo}/>
+                image={reccomendedGameImageTwo}
+                gameTitle={gameTitle}/>
 
             <GameCard 
                 title={reccomendedGameTitleOne}
-                image={reccomendedGameImageOne}/>
+                image={reccomendedGameImageOne}
+                gameTitle={gameTitle}/>
             <GameCard 
-                title={gameTitle}
-                image={gameImage}/>
+                title={reccomendedGameTitleFour}
+                image={reccomendedGameImageFour}
+                gameTitle={gameTitle}/>
         
         </div>
     )

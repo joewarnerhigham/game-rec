@@ -12,7 +12,7 @@ const GameDetails =
     
     }) => {
 
-    const square = { width: 175, height: 175 }
+    const square = { width: 175, height: 155 }
 
     
 
