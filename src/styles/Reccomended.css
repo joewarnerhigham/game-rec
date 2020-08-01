@@ -5,12 +5,14 @@
     flex-direction: row;
     justify-content: space-around;
     margin: 20px;
-    overflow: scroll;
 
 }
 
 @media only screen and (max-width: 1000px) {
-    .reccomended {
-        align-items: center;
+    .reccomended{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     }
 }

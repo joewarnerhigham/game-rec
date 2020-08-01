@@ -1,8 +1,7 @@
 .game-details {
     display: flex;
     background: rgba(199, 141, 141, 0.26);
-    height: 600px;
-    overflow: scroll;
+    height: max-content;
     margin: 20px;
     padding: 20px;
 }
@@ -17,7 +16,8 @@
 }
 
 .about-game {
-    margin-top: 20px;
+    margin: 20px;
+    text-align: center;
 }
 
 

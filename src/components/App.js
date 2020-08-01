@@ -27,7 +27,7 @@ function App() {
           recGameTitleTwo: 'Destiny',
         },
         recGameThree: {
-          recGameImageThree: 'https://cdn-products.eneba.com/resized-products/6M1qP76B-j6vdX0T4bFCHgJeX99MaKBpXFxbpif1MqY_390x400_1x-0.jpeg',
+          recGameImageThree: 'https://images.pushsquare.com/7efe4c6a07f2e/red-dead-redemption-2-cover.cover_large.jpg',
           recGameTitleThree: 'Red Dead Redemption 2',
         },
     },
@@ -41,7 +41,7 @@ function App() {
   const [findBest, setFindBest] = useState(initialState.currentGame.findBest);
 
   const [reccomendedGameImageOne, setReccomendedGameImageOne] = useState(initialState.reccomendedGames.recGameOne.recGameImageOne);
-  const [reccomendedGameTitleOne, setReccomendedGameTitleOne] = useState(initialState.reccomendedGames.recGameTwo.recGameTitleOne);
+  const [reccomendedGameTitleOne, setReccomendedGameTitleOne] = useState(initialState.reccomendedGames.recGameOne.recGameTitleOne);
   const [reccomendedGameImageTwo, setReccomendedGameImageTwo] = useState(initialState.reccomendedGames.recGameTwo.recGameImageTwo);
   const [reccomendedGameTitleTwo, setReccomendedGameTitleTwo] = useState(initialState.reccomendedGames.recGameTwo.recGameTitleTwo);
   const [reccomendedGameImageThree, setReccomendedGameImageThree] = useState(initialState.reccomendedGames.recGameThree.recGameImageThree);
