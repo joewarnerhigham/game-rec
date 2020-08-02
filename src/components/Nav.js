@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import '../styles/Nav.css';
 import { Input } from 'semantic-ui-react';
+import getGameInfo from './requests/getGameInfo';
 
 const Nav = ({
-            setgameImage,
+            setGameImage,
+            setGameTitle,
+            setGameDetails,
         }) => {
 
     const [value, setValue] = useState('');
@@ -15,8 +18,8 @@ const Nav = ({
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setgameImage(value);
-    };
+        getGameInfo(value, setValue, setGameImage, setGameTitle, setGameDetails);
+        };
 
     return (
         <div className='nav'>

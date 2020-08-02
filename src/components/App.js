@@ -61,14 +61,14 @@ function App() {
 
     <div className="App">
       <Nav
-        setgameImage={setGameImage}
+        setGameImage={setGameImage}
         setReccomendedGameImageOne={setReccomendedGameImageOne}
         setReccomendedGameImageTwo={setReccomendedGameImageTwo}
-        gameTitle={setGameTitle}
-        gameDetails={setGameDetails}
-        gameRating={setGameRating}
-        gamePrice={setGamePrice}
-        findBest={setFindBest} />
+        setGameTitle={setGameTitle}
+        setGameDetails={setGameDetails}
+        setGameRating={setGameRating}
+        setGamePrice={setGamePrice}
+        setFindBest={setFindBest} />
       <GameDetails 
         gameImage={gameImage}
         gameTitle={gameTitle}
