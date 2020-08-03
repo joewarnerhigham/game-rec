@@ -7,6 +7,7 @@ const Nav = ({
             setGameImage,
             setGameTitle,
             setGameDetails,
+            setGameRating,
         }) => {
 
     const [value, setValue] = useState('');
@@ -18,7 +19,7 @@ const Nav = ({
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        getGameInfo(value, setValue, setGameImage, setGameTitle, setGameDetails);
+        getGameInfo(value, setValue, setGameImage, setGameTitle, setGameDetails, setGameRating);
         };
 
     return (
@@ -27,6 +28,7 @@ const Nav = ({
             <h1 className='logo'> GaRecco </h1>
             <form onSubmit= {handleSubmit}>
                 <Input onChange={handleChange} className='search-bar' placeholder='Search...' value={value}/>
+                <button classname='search-button'>Search</button>
             </form>
         
         </div>

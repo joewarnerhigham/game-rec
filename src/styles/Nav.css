@@ -8,11 +8,18 @@
     
 }
 
+form {
+    display: flex;
+    height: max-content;
+}
+
+.search-button {
+    height: max-content;
+}
+
 .logo {
     margin-right: 300px;
 }
-
-
 
 input{
     width: 500px;

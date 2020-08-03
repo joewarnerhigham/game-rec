@@ -9,16 +9,14 @@ const getGameInfo = (value,
                     setGamePrice,
                     setFindBest) => {
 
-    // const gameName = (value) => {
-    //     data.
-    // }
 
     axios.get(`https://api.rawg.io/api/games/${value}`)
         .then((data) => {
             console.log(data.data)
             setGameImage(data.data.background_image)
             setGameTitle(data.data.name)
-            setGameDetails(data.data.description)
+            setGameDetails(data.data.description_raw)
+            setGameRating(data.data.rating)
 
         })
         .catch((err)=> {
