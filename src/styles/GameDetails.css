@@ -1,9 +1,9 @@
 .game-details {
     display: flex;
-    background: rgba(199, 141, 141, 0.26);
+    background: rgba(235, 231, 231, 0.685);
     height: max-content;
     margin: 20px;
-    overflow: hidden;
+    padding: 40px;
 }
 
 .header{
@@ -28,10 +28,18 @@
 @media only screen and (max-width: 1000px) {
 
 .game-details {
-        justify-content: center;
-        flex-direction: column;
-        height: max-content;
-        align-items: center;
-        text-align: center;
-    }
+    justify-content: center;
+    flex-direction: column;
+    height: max-content;
+    align-items: center;
+    text-align: center;
+}
+
+.game-image {
+    width: 100%;
+}
+
+.rating {
+    transform: scale(0.8);
+}
 }

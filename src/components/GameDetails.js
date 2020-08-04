@@ -29,7 +29,7 @@ const GameDetails =
                     </Button>
                 </div>
             </Container>
-            <Segment circular style={square}>
+            <Segment className='rating' circular style={square}>
                 <Header as='h2'>
                     Rating 
                     <Header.Subheader>

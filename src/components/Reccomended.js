@@ -14,7 +14,7 @@ const Reccomended = ({reccomendedGameTitleOne,
                     reccomendedGameTitleFour,
                 }) => {
     return (
-        <div className='reccomended'>
+        <div className='reccomended' id='reccomended'>
             
             <GameCard 
                 title={reccomendedGameTitleThree}
