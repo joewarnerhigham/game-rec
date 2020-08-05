@@ -18,18 +18,16 @@ const GameDetails =
 
     return (
         <div className='game-details'>
-            <img className='game-image' src={gameImage} alt='gamepic' />
+                <img className='game-image' src={gameImage} alt='gamepic' />
             <Container className='about-game' text>
-                <Header as='h2' > {gameTitle} </Header>
+                <Header as='h1' className='header' > {gameTitle} </Header>
                 {gameDetails}
-                <div>
+                <div className='container'>
                     <Button animated='fade'>
                         <Button.Content visible> Cheapest Price </Button.Content>
                         <Button.Content hidden>${gamePrice}</Button.Content>
                     </Button>
-                </div>
-            </Container>
-            <Segment className='rating' circular style={square}>
+                    <Segment className='rating' circular style={square}>
                 <Header as='h2'>
                     Rating 
                     <Header.Subheader>
@@ -41,6 +39,9 @@ const GameDetails =
                 <Icon name='star' size='small'></Icon>
                 <Icon name='star' size='small'></Icon>
             </Segment>
+                </div>
+            </Container>
+            
         </div>
     )
 }
