@@ -18,8 +18,8 @@ form {
     display: flex;
     height: max-content;
     margin-top: 20vh;
-    background-color: rgba(206, 205, 205, 0.589);
-    padding: 0vh 5vh;
+    background-color: rgba(253, 0, 0, 0.418);
+    padding: 0vh 2vh;
     border: white solid 1px;
     border-radius: 10px;
     transition: 1s;
@@ -41,11 +41,11 @@ form:hover {
 
 .logo {
     height: max-content;
-    margin-left: -40vh;
+    margin-left: -20vh;
     border: solid 1px white;
     border-radius: 4px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.63);
+    background-color: rgba(255, 0, 0, 0.418);
 }
 
 .search-bar {
