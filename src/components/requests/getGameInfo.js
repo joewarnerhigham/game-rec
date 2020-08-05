@@ -10,7 +10,7 @@ const getGameInfo = (value,
                     setGamePrice,
                     setFindBest) => {
 
-    const setBackground = (img) => {
+    const setBackground = (img, color) => {
         document.getElementById('nav').style.backgroundImage = `url(${img})`;
         document.getElementById('nav').style.backgroundSize = 'cover';
         document.getElementById('nav').style.backgroundPosition = 'center';
@@ -25,7 +25,7 @@ const getGameInfo = (value,
             setGameTitle(data.data.name)
             setGameDetails(data.data.description_raw)
             setGameRating(data.data.rating)
-            setBackground(data.data.background_image_additional)
+            setBackground(data.data.background_image_additional, data.data.dominant_color)
 
         })
         .catch((err)=> {

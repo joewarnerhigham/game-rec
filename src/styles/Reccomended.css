@@ -1,12 +1,14 @@
 .reccomended {
-    background: rgba(235, 231, 231, 0.685);
+    background: #0f0f0f;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     border: solid white 4px;
-    
+}
 
+.reccomended h4 {
+    color: white;
 }
 
 @media only screen and (max-width: 1000px) {

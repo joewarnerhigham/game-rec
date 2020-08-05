@@ -1,6 +1,6 @@
 .game-details {
     display: flex;
-    background: rgba(179, 175, 175, 0.404);
+    background: #0f0f0f60;
     height: max-content;
     margin-top: -10vh;
     border: solid white 1px;
@@ -9,10 +9,10 @@
 }
 
 .game-image {
-    height: 40vh;
+    max-height: 40vh;
     margin: 2vh;
     max-width: 40vh;
-    border: solid white 1px;
+    border: solid white 2px;
 }
 
 .ui.text.container {
@@ -23,7 +23,7 @@
         padding-top: 3vh;
         text-align: center;
         background-color: rgba(212, 211, 211, 0.753);
-        border: white 1px dotted;
+        border: white 2px solid;
         height: max-content;
 }
 
