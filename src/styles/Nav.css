@@ -1,51 +1,46 @@
 .nav {
-    background-image: url('https://media.wired.com/photos/5ee9a89f39276c28369687e1/master/pass/cloud-gaming-453089-edit.jpg');
-    background-position: center;
     background-size: cover;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    color: white;
-    height: 45vh;
-    transition: 1s;
+    height: 35vh;
+    transition: 2s;
 }
 
 .nav:hover {
-    height: 60vh;
+    height: 50vh;
 }
 
-form {
+.search-form {
     display: flex;
     height: max-content;
-    margin-top: 20vh;
-    background-color: rgba(255, 0, 0, 0.801);
-    padding: 0vh 2vh;
-    border: white solid 1px;
-    border-radius: 10px;
+    margin: 10vh 0vh;
     transition: 1s;
 }
 
-form:hover {
+.search-form:hover {
     transform: scale(1.1);
 }
 
-.search-button {
-    height: max-content;
+.ui.input {
+    width: 30vh;
+}
+
+.ui.button.search-button {
+    transform: scale(0.75);
     border-radius: 4px;
+    margin: 2vh;
     align-self: center;
-    margin: 20px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.63);
-    color: white; 
+    background-color: rgba(231, 231, 231, 0.63);
+    transition: 3s;
 }
 
 .logo {
     height: max-content;
-    margin-left: -20vh;
-    border: solid 1px white;
     border-radius: 4px;
-    padding: 20px;
-    background-color: rgba(255, 0, 0, 0.753);
+    padding: 3vh;
+    color: white;
 }
 
 .search-bar {
@@ -55,31 +50,32 @@ form:hover {
     
 }
 
-
 @media only screen and (max-width: 1000px) {
     .nav {
       flex-direction: column;
-      height: 50vh;
+      height: 25vh;
       width: 100%;
       align-items: start;
     }
-
-    
 
     .logo {
         margin: 0vh;
         align-self: center;
     }
 
-    form {
+    .search-form {
         flex-direction: column;
         padding: 0vh;
         padding-top: 5vh;
         align-self: center;
         background: none;
         border: none;
+        transform: scale(0.7);
     }
 
+    .search-form:hover {
+        transform: scale(1);
+    }
 
     
     

@@ -1,38 +1,46 @@
 .game-details {
     display: flex;
-    background: #0f0f0f60;
+    flex-wrap: wrap;
+    background: #9d9fa063;
     height: max-content;
-    margin-top: -10vh;
-    border: solid white 1px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
     padding: 2vh;
-    flex-wrap: nowrap;
+    margin-top: -5vh;
+    border-top: white dashed 1px;
 }
 
 .game-image {
-    max-height: 40vh;
-    margin: 2vh;
-    max-width: 40vh;
+    max-height: 30vh;
+    margin: 1vh;
     border: solid white 2px;
 }
 
 .ui.text.container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
-        margin: 0;
         padding-top: 3vh;
         text-align: center;
-        background-color: rgba(212, 211, 211, 0.753);
-        border: white 2px solid;
         height: max-content;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 2vh;
+.button.ui.fade.animated.button {
+    width: max-content;
+    align-self: center;
+}
 
+.ui.circular.segment{
+    align-self: flex-end;
+    align-self: center;
+}
+
+h1.ui.header {
+    color: rgb(0, 0, 0);
+    transform: scale(1.5);
+    margin: 2vh;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -43,6 +51,8 @@
     height: max-content;
     align-items: center;
 }
+
+
 
 .game-image {
     width: 100%;

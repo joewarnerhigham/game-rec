@@ -7,7 +7,6 @@ const GameCard = ({title, image, gameTitle}) => {
     return (
 
         <div className='game-card'>
-            <h4>Reccomended {title} becasue of {gameTitle} </h4>
             <Card 
                 image={image} 
                 header={title}

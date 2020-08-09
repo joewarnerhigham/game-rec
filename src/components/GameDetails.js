@@ -1,33 +1,26 @@
 import React from 'react';
 import '../styles/GameDetails.css';
-import { Container, Header, Segment, Button, Icon } from 'semantic-ui-react';
+import { Container, Header, Button, Icon, Segment} from 'semantic-ui-react';
 
 const GameDetails = 
     ({  
         gameImage,
         gameTitle,
-        gameDetails, 
+        gameDetails,
         gameRating,
         gamePrice,
     
     }) => {
 
-    const square = { width: 175, height: 155 }
-
-    
+    const square = { width: 140, height: 115 }
 
     return (
         <div className='game-details'>
                 <img className='game-image' src={gameImage} alt='gamepic' />
             <Container className='about-game' text>
-                <Header as='h1' className='header' > {gameTitle} </Header>
+                    <Header as='h1' className='header' > {gameTitle} </Header>
                 {gameDetails}
-                <div className='container'>
-                    <Button animated='fade'>
-                        <Button.Content visible> Cheapest Price </Button.Content>
-                        <Button.Content hidden>${gamePrice}</Button.Content>
-                    </Button>
-                    <Segment className='rating' circular style={square}>
+                <Segment className='rating' circular style={square}>
                 <Header as='h2'>
                     Rating 
                     <Header.Subheader>
@@ -39,7 +32,10 @@ const GameDetails =
                 <Icon name='star' size='small'></Icon>
                 <Icon name='star' size='small'></Icon>
             </Segment>
-                </div>
+            <Button animated='fade'>
+                        <Button.Content visible> Cheapest Price </Button.Content>
+                        <Button.Content hidden>${gamePrice}</Button.Content>
+                    </Button>
             </Container>
             
         </div>

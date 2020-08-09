@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    max-width: 25vh;
+    margin: 1vh;
     overflow: hidden;
-    margin: 20px;
     text-align: center;
 }
 
+.reccomended h4 { 
+    margin-bottom: 2vh;
+}
 
 
 @media only screen and (max-width: 1000px) {

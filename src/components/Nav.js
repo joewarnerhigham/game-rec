@@ -1,13 +1,21 @@
 import React, {useState} from 'react';
 import '../styles/Nav.css';
-import { Input } from 'semantic-ui-react';
 import getGameInfo from './requests/getGameInfo';
+import { Input, Button } from 'semantic-ui-react';
 
 const Nav = ({
             setGameImage,
             setGameTitle,
             setGameDetails,
             setGameRating,
+            setReccomendedGameTitleOne,
+            setReccomendedGameImageOne,
+            setReccomendedGameTitleTwo,
+            setReccomendedGameImageTwo,
+            setReccomendedGameTitleThree,
+            setReccomendedGameImageThree,
+            setReccomendedGameImageFour,
+            setReccomendedGameTitleFour,
         }) => {
 
     const [value, setValue] = useState('');
@@ -19,19 +27,32 @@ const Nav = ({
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        getGameInfo(value, setValue, setGameImage, setGameTitle, setGameDetails, setGameRating);
+        getGameInfo(value,
+                    setValue,
+                    setGameImage,
+                    setGameTitle,
+                    setGameDetails,
+                    setGameRating,
+                    setReccomendedGameTitleOne,
+                    setReccomendedGameImageOne,
+                    setReccomendedGameTitleTwo,
+                    setReccomendedGameImageTwo,
+                    setReccomendedGameTitleThree,
+                    setReccomendedGameImageThree,
+                    setReccomendedGameImageFour,
+                    setReccomendedGameTitleFour,
+                );
         };
 
     return (
         <div className='nav' id='nav'>
-            <div className='logo-img'></div>
             <h1 className='logo'> GaRecco </h1>
-            <form onSubmit= {handleSubmit}>
+            <form className='search-form' onSubmit= {handleSubmit}>
                 <Input onChange={handleChange} className='search-bar' placeholder='Search...' value={value}/>
-                <button className='search-button'><h3>Search!</h3></button>
+                <Button className='search-button'><h3>Search!</h3></Button>
             </form>
-        
         </div>
+        
     )
 }
         

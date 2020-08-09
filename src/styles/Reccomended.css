@@ -2,9 +2,11 @@
     background: #0f0f0f;
     height: 60vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     border: solid white 4px;
+    height: max-content;
 }
 
 .reccomended h4 {
@@ -17,6 +19,5 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        height: max-content;
     }
 }

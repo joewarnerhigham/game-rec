@@ -1,57 +1,69 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../styles/App.css';
 import Nav from './Nav';
 import GameDetails from './GameDetails';
 import Reccomended from './Reccomended';
+import axios from 'axios';
 
 
 function App() {
 
-  const initialState = {
-    currentGame: {
-      gameImage: 'https://www.rockstargames.com/rockstar_games/games/img/fob/640/sanandreas.jpg',
-      gameTitle: 'GTA San Andreas',
-      gameDetails: 'Game Details',
-      gameRating: '4.2',
-      gamePrice: '12.99',
-      findBest: '',
-    },
+  const [gameImage, setGameImage] = useState();
+  const [gameTitle, setGameTitle] = useState();
+  const [gameDetails, setGameDetails] = useState();
+  const [gameRating, setGameRating] = useState();
+  const [gamePrice, setGamePrice] = useState();
+  const [findBest, setFindBest] = useState();
 
-    reccomendedGames: {
-        recGameOne: {
-          recGameImageOne: 'https://upload.wikimedia.org/wikipedia/en/9/92/Halo2-cover.png',
-          recGameTitleOne: 'Halo 2',
-        },
-        recGameTwo: {
-          recGameImageTwo: 'https://i.redd.it/5ah99bv9croy.png',
-          recGameTitleTwo: 'Destiny',
-        },
-        recGameThree: {
-          recGameImageThree: 'https://images.pushsquare.com/7efe4c6a07f2e/red-dead-redemption-2-cover.cover_large.jpg',
-          recGameTitleThree: 'Red Dead Redemption 2',
-        },
-        recGameFour: {
-          recGameImageFour: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/CallofDutyModernWarfare%282019%29.jpg/220px-CallofDutyModernWarfare%282019%29.jpg',
-          recGameTitleFour: 'Call Of Duty MW',
-        },
-    },
-  };
+  const [reccomendedGameImageOne, setReccomendedGameImageOne] = useState();
+  const [reccomendedGameTitleOne, setReccomendedGameTitleOne] = useState();
+  const [reccomendedGameImageTwo, setReccomendedGameImageTwo] = useState();
+  const [reccomendedGameTitleTwo, setReccomendedGameTitleTwo] = useState();
+  const [reccomendedGameImageThree, setReccomendedGameImageThree] = useState();
+  const [reccomendedGameTitleThree, setReccomendedGameTitleThree] = useState();
+  const [reccomendedGameImageFour, setReccomendedGameImageFour] = useState();
+  const [reccomendedGameTitleFour, setReccomendedGameTitleFour] = useState();
 
-  const [gameImage, setGameImage] = useState(initialState.currentGame.gameImage);
-  const [gameTitle, setGameTitle] = useState(initialState.currentGame.gameTitle);
-  const [gameDetails, setGameDetails] = useState(initialState.currentGame.gameDetails);
-  const [gameRating, setGameRating] = useState(initialState.currentGame.gameRating);
-  const [gamePrice, setGamePrice] = useState(initialState.currentGame.gamePrice);
-  const [findBest, setFindBest] = useState(initialState.currentGame.findBest);
+  useEffect(() => {
 
-  const [reccomendedGameImageOne, setReccomendedGameImageOne] = useState(initialState.reccomendedGames.recGameOne.recGameImageOne);
-  const [reccomendedGameTitleOne, setReccomendedGameTitleOne] = useState(initialState.reccomendedGames.recGameOne.recGameTitleOne);
-  const [reccomendedGameImageTwo, setReccomendedGameImageTwo] = useState(initialState.reccomendedGames.recGameTwo.recGameImageTwo);
-  const [reccomendedGameTitleTwo, setReccomendedGameTitleTwo] = useState(initialState.reccomendedGames.recGameTwo.recGameTitleTwo);
-  const [reccomendedGameImageThree, setReccomendedGameImageThree] = useState(initialState.reccomendedGames.recGameThree.recGameImageThree);
-  const [reccomendedGameTitleThree, setReccomendedGameTitleThree] = useState(initialState.reccomendedGames.recGameThree.recGameTitleThree);
-  const [reccomendedGameImageFour, setReccomendedGameImageFour] = useState(initialState.reccomendedGames.recGameFour.recGameImageFour);
-  const [reccomendedGameTitleFour, setReccomendedGameTitleFour] = useState(initialState.reccomendedGames.recGameFour.recGameTitleFour);
+    const curDate = new Date().toISOString().substring(0, 10);
+    const randomNum = Math.floor(Math.random() * 19);
+    const setBackground = (img) => {
+      document.getElementById('nav').style.backgroundImage = `url(${img})`;
+      document.getElementById('nav').style.backgroundPosition = 'top';
+    }; 
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          `https://api.rawg.io/api/games?dates=2020-01-01,${curDate}&ordering=-added`
+        );
+        const { data } = await axios.get(
+          `https://api.rawg.io/api/games/${res.data.results[randomNum].slug}`
+        );
+        setGameImage(data.background_image);
+        setGameTitle(data.name);
+        setGameDetails(data.description_raw);
+        setGameRating(Math.round((data.rating + Number.EPSILON)*10*2) + '/100');
+        setBackground(data.background_image_additional);
+
+        const suggested = await axios.get(
+          `https://api.rawg.io/api/games/${res.data.results[randomNum].slug}/suggested`
+        );
+        console.log(suggested)
+        setReccomendedGameImageOne(suggested.data.results[0].background_image);
+        setReccomendedGameTitleOne(suggested.data.results[0].name);
+        setReccomendedGameImageTwo(suggested.data.results[1].background_image);
+        setReccomendedGameTitleTwo(suggested.data.results[1].name);
+        setReccomendedGameImageThree(suggested.data.results[2].background_image);
+        setReccomendedGameTitleThree(suggested.data.results[2].name);
+        setReccomendedGameImageFour(suggested.data.results[3].background_image);
+        setReccomendedGameTitleFour(suggested.data.results[3].name);
+      } catch (err) {
+        alert('Unfortunately this service is currently unavailable');
+      }
+    };
+    fetchData();
+  }, []);
   
   
 
@@ -68,7 +80,9 @@ function App() {
         setGameDetails={setGameDetails}
         setGameRating={setGameRating}
         setGamePrice={setGamePrice}
-        setFindBest={setFindBest} />
+        setFindBest={setFindBest}
+        gamePrice={gamePrice}
+        gameRating={gameRating} />
       <GameDetails 
         gameImage={gameImage}
         gameTitle={gameTitle}
