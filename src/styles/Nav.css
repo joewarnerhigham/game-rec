@@ -70,7 +70,6 @@
         align-self: center;
         background: none;
         border: none;
-        transform: scale(0.7);
     }
 
     .search-form:hover {

@@ -15,6 +15,7 @@ const getGameInfo = async (value,
                     setReccomendedGameImageFour,
                     setReccomendedGameTitleFour, 
 )=> {
+    
 
     const setBackground = (img) => {
         document.getElementById('nav').style.backgroundImage = `url(${img})`;
@@ -37,7 +38,6 @@ const getGameInfo = async (value,
           const suggested = await axios.get(
             `https://api.rawg.io/api/games/${newValue}/suggested`
           );
-          console.log(suggested)
           setReccomendedGameImageOne(suggested.data.results[0].background_image);
           setReccomendedGameTitleOne(suggested.data.results[0].name);
           setReccomendedGameImageTwo(suggested.data.results[1].background_image);

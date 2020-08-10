@@ -25,7 +25,6 @@ function App() {
   const [reccomendedGameTitleFour, setReccomendedGameTitleFour] = useState();
 
   useEffect(() => {
-
     const curDate = new Date().toISOString().substring(0, 10);
     const randomNum = Math.floor(Math.random() * 19);
     const setBackground = (img) => {
@@ -76,6 +75,12 @@ function App() {
         setGameImage={setGameImage}
         setReccomendedGameImageOne={setReccomendedGameImageOne}
         setReccomendedGameImageTwo={setReccomendedGameImageTwo}
+        setReccomendedGameImageThree={setReccomendedGameImageThree}
+        setReccomendedGameImageFour={setReccomendedGameImageFour}
+        setReccomendedGameTitleOne={setReccomendedGameTitleOne}
+        setReccomendedGameTitleTwo={setReccomendedGameTitleTwo}
+        setReccomendedGameTitleThree={setReccomendedGameTitleThree}
+        setReccomendedGameTitleFour={setReccomendedGameTitleFour}
         setGameTitle={setGameTitle}
         setGameDetails={setGameDetails}
         setGameRating={setGameRating}
