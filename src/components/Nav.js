@@ -46,7 +46,7 @@ const Nav = ({
 
     return (
         <div className='nav' id='nav'>
-            <h1 className='logo'> GaRecco </h1>
+            <img className='logo' src={ require('./images/logo.png') } onClick='location.href="http://localhost:3000"' alt='logo'/>
             <form className='search-form' onSubmit= {handleSubmit}>
                 <Input onChange={handleChange} className='search-bar' placeholder='Search...' value={value}/>
                 <Button className='search-button'><h3>Search!</h3></Button>

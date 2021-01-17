@@ -19,20 +19,20 @@ const Reccomended = ({reccomendedGameTitleOne,
             <GameCard 
                 title={reccomendedGameTitleThree}
                 image={reccomendedGameImageThree}
-                gameTitle={gameTitle}/>
+                description={reccomendedGameTitleThree}/>
             <GameCard 
                 title ={reccomendedGameTitleTwo}
                 image={reccomendedGameImageTwo}
-                gameTitle={gameTitle}/>
+                description={reccomendedGameTitleTwo}/>
 
             <GameCard 
                 title={reccomendedGameTitleOne}
                 image={reccomendedGameImageOne}
-                gameTitle={gameTitle}/>
+                description={reccomendedGameTitleOne}/>
             <GameCard 
                 title={reccomendedGameTitleFour}
                 image={reccomendedGameImageFour}
-                gameTitle={gameTitle}/>
+                description={reccomendedGameTitleFour}/>
         
         </div>
     )

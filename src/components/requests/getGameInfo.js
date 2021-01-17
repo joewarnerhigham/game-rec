@@ -25,7 +25,9 @@ const getGameInfo = async (value,
     if (!value) {
         return Promise.resolve([]);
       } else {
+        value=value.replace(/\s*$/,"");
         const newValue = value.replace(/ /g, '-');
+        
     
         try {
           const res = await axios.get(`https://api.rawg.io/api/games/${newValue}`);
